@@ -4,6 +4,7 @@ import "./index.css";
 import Link from "./Link/Link"
 import CheckboxWithLabel from "./CheckboxWithLabel/CheckboxWithLabel";
 import {MyApp} from "./MyApp/MyApp";
+import {AsyncComp} from "./AsyncComp/AsyncComp";
 
 const destination = document.querySelector("#container");
 
@@ -13,6 +14,7 @@ ReactDOM.render(
         <Link>Link to ...</Link>
         <CheckboxWithLabel labelOn={"On"} labelOff={"Off"}/>
         <MyApp/>
+        <AsyncComp/>
     </>,
     destination
 );

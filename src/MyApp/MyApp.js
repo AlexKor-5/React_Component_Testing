@@ -10,7 +10,7 @@ export const MyApp = () => {
                 <button>Yep</button>
                 <button>Nope</button>
             </div>
-            <a href="https://jestjs.io/uk/docs/expect" role={"link"}>Link to something ...</a>
+            <a href="https://jestjs.io/uk/docs/expect">Link to something ...</a>
             <div className={"post"}>
                 <h4>Lorem ipsum dolor sit amet.</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cumque cupiditate earum eos

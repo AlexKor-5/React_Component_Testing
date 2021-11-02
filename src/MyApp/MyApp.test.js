@@ -1,5 +1,5 @@
 import React from "react";
-import {render, screen, fireEvent} from "@testing-library/react";
+import {render, fireEvent} from "@testing-library/react";
 import '@testing-library/jest-dom'
 import CheckboxWithLabel from "../CheckboxWithLabel/CheckboxWithLabel";
 
@@ -14,4 +14,11 @@ describe("events", () => {
         expect(inputChecker(/on/i)).toBeChecked()
     })
 })
+
+// describe("find method using", () => {
+//     it("gets something", async () => {
+//         const {queryByLabelText, findByLabelText} = render(<CheckboxWithLabel labelOn="On" labelOff="Off"/>)
+//
+//     })
+// })
 
