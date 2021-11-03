@@ -1,19 +1,18 @@
-import React, {useEffect, useState} from "react"
+import React, {useState} from "react"
 import "./asyncComp.css"
+import {fetchUsers} from "./fetchUsers";
+
+export const url = "https://61810e218bfae60017adfdcd.mockapi.io/users";
 
 export const AsyncComp = () => {
     const [users, setUsers] = useState([])
     const [error, setError] = useState(null)
 
-    useEffect(() => {
-        fetch('https://61810e218bfae60017adfdcd.mockapi.io/users')
-            .then(response => response.json())
-            .then(json => setUsers(json))
-            .catch(e => {
-                console.log("error = ", e)
-                setError(e)
-            })
-    }, [])
+    const handleButtonClick = () => {
+        fetchUsers(url)
+            .then(data => setUsers(data))
+            .catch(e => setError(e))
+    }
 
     const displayUsers = (users) => {
         if (!Array.isArray(users)) return false
@@ -26,9 +25,10 @@ export const AsyncComp = () => {
     return (
         <>
             <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            <button onClick={handleButtonClick}>Obtain Users</button>
             <div className={"users"}>
                 {error && <p className={"error"}>Something has just gone wrong! ({error})</p>}
-                {displayUsers(users)}
+                {!error && displayUsers(users)}
             </div>
         </>
     )
@@ -37,7 +37,7 @@ export const AsyncComp = () => {
 const User = ({name, avatar}) => {
     return (
         <div className={"user"}>
-            <img src={avatar} alt="error"/>
+            <img src={avatar} alt="image error"/>
             <p><b>{name}</b></p>
         </div>
     )

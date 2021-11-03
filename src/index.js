@@ -10,10 +10,10 @@ const destination = document.querySelector("#container");
 
 ReactDOM.render(
     <>
-        <h1>Hello</h1>
-        <Link>Link to ...</Link>
-        <CheckboxWithLabel labelOn={"On"} labelOff={"Off"}/>
-        <MyApp/>
+        {/*<h1>Hello</h1>*/}
+        {/*<Link>Link to ...</Link>*/}
+        {/*<CheckboxWithLabel labelOn={"On"} labelOff={"Off"}/>*/}
+        {/*<MyApp/>*/}
         <AsyncComp/>
     </>,
     destination
