@@ -37,7 +37,7 @@ export const AsyncComp = () => {
 const User = ({name, avatar}) => {
     return (
         <div className={"user"}>
-            <img src={avatar} alt="image error"/>
+            <img src={avatar} alt="imageerror"/>
             <p><b>{name}</b></p>
         </div>
     )
