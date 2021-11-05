@@ -6,6 +6,8 @@ import "./index.css";
 // import {MyApp} from "./MyApp/MyApp";
 import {AsyncComp} from "./AsyncComp/AsyncComp";
 import {ModalContainer} from "./PortalTesting/ModalContainer/ModalContainer";
+import {AuthProvider} from "./ContextTesting/AuthProvider";
+import {ConsumerComponent} from "./ContextTesting/ConsumerComponent";
 
 const destination = document.querySelector("#container");
 
@@ -16,6 +18,11 @@ ReactDOM.render(
         {/*<CheckboxWithLabel labelOn={"On"} labelOff={"Off"}/>*/}
         {/*<MyApp/>*/}
         <AsyncComp/>
+
+        <AuthProvider>
+            <ConsumerComponent/>
+        </AuthProvider>
+
         <ModalContainer/>
     </React.StrictMode>,
     destination
